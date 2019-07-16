@@ -1,0 +1,79 @@
+#interactive-table * {
+  font-weight: normal;
+  font-size: 9px;
+  color: black;
+  cursor: default;
+}
+
+#interactive-table td,
+#interactive-table th {
+  border: 1px solid black;
+  padding: 0;
+}
+
+#interactive-table table {
+  border-collapse: collapse;
+}
+
+#interactive-table table td {
+  padding: 0;
+  line-height: 14px;
+}
+
+.header-col > div,
+.header-both > div {
+  white-space: nowrap;
+  width: 14px;
+  height: 150px;
+  transform-origin: top left;
+  transform: translate(2px, 148px) rotate(270deg) 
+}
+
+.header-row, .cell {
+  white-space: nowrap;
+  height: 14px;
+}
+
+.header-row > div {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 2px;
+}
+
+#interactive-table .bold > div {
+  font-weight: bold;
+}
+
+.cell > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row:hover,
+.highlighted {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+.tip{
+  visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+  z-index: 2 !important; 
+    position: absolute;      
+   transform: rotate(90deg);
+   white-space: pre-line;
+    text-align: center;     
+    width: 160px;          
+    height: 38px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: white; 
+    border: 0px;    
+    border-radius: 8px;     
+ /*   pointer-events: none; */
+
+}

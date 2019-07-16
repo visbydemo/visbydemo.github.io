@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <!--
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="keywords" content="Visualization, information visualziation, visualization recommendation, visualization recommender, recommending visualizations, visualization library">
+    <title>Visualization by Demonstration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="shortcut icon" type="image/png" href="encoding.png">
+    <link rel="stylesheet" href="stylesheets/table.css">
+<!--     <script src="machine_learning.min.js"></script> -->
+
+
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <body>
+    <script>
+      $('table td, table th').hover(function () {
+      $('table td:nth-child(' + ($(this).index() + 1) + ')').addClass('hover');
+      },function () {
+          $('table td:nth-child(' + ($(this).index() + 1) + ')').removeClass('hover');
+      });
+    </script>
+    <div class="wrapper">
+      <section>
+        <div>
+<!--           <div style="float:left; margin-right:5px; "> <img src="encoding.png" style=" width: 21px;"alt="encoding"></div>
+          -->
+          <h2> Visualization by Demonstration</h2>
+        <!--   <h4><font color="#1379DC">Bahador Saket, Samuel Huron, Charles Perin, Alex Endert</font></h4> -->
+        </div>
+   
+         <div class="header">
+          <ul>
+            <li>
+              <a href="https://github.com/visbydemo">
+                Fork on <strong style="line-height: 130%;">GitHub</strong>
+              </a>
+            </li>
+             <li>
+              <a href="https://liger-vis.now.sh/">
+                Link to<strong style="line-height: 130%;">Prototype</strong>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div>
+        </div>
+
+        <!-- <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p> -->
+        <h3>What is this study about?</h3>
+        <p style="margin-top:-15px">
+         A commonly used interaction paradigm in visualization systems is \textit{Manual View Specification}. This paradigm requires users to manually specify the desired visualization specifications and parameters through interface elements such as menus. Interface elements introduced by this paradigm act as mediators between users and the visual representation. As such, these systems require users to constantly break their higher level tasks into a set of lower level operations on the interface elements presented on control panels. For instance, consider the task of filtering data points out of a scatterplot showing homes for sale, where a user wants to filter out homes with less than 3 bedrooms. In this case, users need to go through layers of menus to specify the operation (filter) and the criteria (value of less than 3 for the variable ``bedrooms''). This form of interaction imposes extra execution and cognitive costs especially as the number of lower-level operations increases.
+
+         In response, we contributed Vis by Demo, which is an alternative interaction paradigm for visual data exploration. With Vis by Demo, people directly manipulate the visual representation to provide partial demonstrations of their intent to the system. The system then interprets the intent of the person and suggests or applies changes to the visualization. For example, users could color a few data points to convey their interest in mapping color to a data attribute. In response, the system extracts data attributes that can be mapped to color and suggests them. Vis by Demo leverages research showing the benefits of letting people create spatial representations of data points manually, without formalizing the mappings between data and spatial constructs.
+
+
+        </p>
+
+    </div>
+    <script src="javascripts/scale.fix.js"> </script>
+    <script src="javascripts/UI.js"> </script>
+    <script src="kopol.min.js"> </script>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="javascripts/table.js"></script> -->
+
+
+</body>
+
+</html>
