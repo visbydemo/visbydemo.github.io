@@ -1,88 +1,210 @@
-<!doctype html>
-<html>
-  <head>
-    <!--
-    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="keywords" content="Visualization, information visualziation, visualization recommendation, visualization recommender, recommending visualizations, visualization library">
-    <title>Visualization by Demonstration</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="shortcut icon" type="image/png" href="encoding.png">
-    <link rel="stylesheet" href="stylesheets/table.css">
-<!--     <script src="machine_learning.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jung Wook Park">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Georgia Tech Ubicomp Group</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Font for Navbar-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
 
-    <meta name="viewport" content="width=device-width">
-  </head>
+</head>
 
-  <body>
-    <script>
-      $('table td, table th').hover(function () {
-      $('table td:nth-child(' + ($(this).index() + 1) + ')').addClass('hover');
-      },function () {
-          $('table td:nth-child(' + ($(this).index() + 1) + ')').removeClass('hover');
-      });
-    </script>
-    <div class="wrapper">
-      <section>
-        <div>
-<!--           <div style="float:left; margin-right:5px; "> <img src="encoding.png" style=" width: 21px;"alt="encoding"></div>
-          -->
-          <h2> Visualization by Demonstration (Vis by Demo)</h2>
-        <!--   <h4><font color="#1379DC">Bahador Saket, Samuel Huron, Charles Perin, Alex Endert</font></h4> -->
+<body>
+    <div class="container">
+        <div class="research project-title">
+            <h1>Visualization by Demonstration</h1>
         </div>
-   
-         <div class="header">
-          <ul>
-            <li>
-              <a href="https://github.com/visbydemo">
-                Fork on <strong style="line-height: 130%;">GitHub</strong>
-              </a>
-            </li>
-             <li>
-              <a href="https://liger-vis.now.sh/">
-                Link to<strong style="line-height: 130%;">Prototype</strong>
-              </a>
-            </li>
-             <li>
-              <a href="https://vimeo.com/228918233">
-                Link to<strong style="line-height: 130%;">Video</strong>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-        </div>
-
-        <!-- <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p> -->
-        <p style="margin-top:-15px">
-         A commonly used interaction paradigm in visualization systems is Manual View Specification. This paradigm requires users to manually specify the desired visualization specifications and parameters through interface elements such as menus. Interface elements introduced by this paradigm act as mediators between users and the visual representation. As such, these systems require users to constantly break their higher level tasks into a set of lower level operations on the interface elements presented on control panels. For instance, consider the task of filtering data points out of a scatterplot showing homes for sale, where a user wants to filter out homes with less than 3 bedrooms. In this case, users need to go through layers of menus to specify the operation (filter) and the criteria (value of less than 3 for the variable ``bedrooms''). This form of interaction imposes extra execution and cognitive costs especially as the number of lower-level operations increases. <br> <br>
-       </p>
-        <div style="width: 70%; margin: auto; margin-bottom: 15px;">
-         <img src="control.png" alt="Italian Trulli">
-        </div>
-        
-        <p>
-         In response, we contributed Vis by Demo, which is an alternative interaction paradigm for visual data exploration. With Vis by Demo, people directly manipulate the visual representation to provide partial demonstrations of their intent to the system. The system then interprets the intent of the person and suggests or applies changes to the visualization. For example, users could color a few data points to convey their interest in mapping color to a data attribute. In response, the system extracts data attributes that can be mapped to color and suggests them. Vis by Demo leverages research showing the benefits of letting people create spatial representations of data points manually, without formalizing the mappings between data and spatial constructs.
-        </p>
-   
-       <div>
-         <img src="demo.png" alt="Italian Trulli">
-       </div>
     </div>
-    <script src="javascripts/scale.fix.js"> </script>
-    <script src="javascripts/UI.js"> </script>
-    <script src="kopol.min.js"> </script>
-    
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <!-- <script src="javascripts/table.js"></script> -->
+
+    <div class="container">
+        <!-- Research -->
+        <div class="research">
+            <div class="content">
+                <div class="info">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="detail">
+                                <!-- [****EDIT****] Project Members -->
+                                <p>
+                                    <i class="fas fa-users"></i> Main Investigators
+                                    <span>Bahador Saket
+                                        <br>
+                                        Alex Endert</span>
+                                </p>
+                                <!-- [****EDIT****]Project Sponsors -->
+                                <p>
+                                    <i class="far fa-money-bill-alt"></i> Sponsors
+                                    <span>National Science Foundation</span>
+                                </p>
+                                <!-- [****EDIT****] Publication-->
+                                <p>
+                                    <i class="fas fa-download"></i> Publications
+                                    <span class="multiple_items">
+                                    <a href="http://bahadorsaket.com/publication/VbD-Paper.pdf" target="_blank">InfoVis 2017</a>
+                                    <span class="separator">|</span>
+                                    <br class="d-none d-lg-block d-xl-none">
+                                    <a href="http://bahadorsaket.com/publication/encodingsPaper.pdf" target="_blank">TVCG 2018</a>
+                                    <br>
+                                    <a href="http://bahadorsaket.com/publication/EMS.pdf" target="_blank">InfoVis 2018</a>
+                                    <span class="separator">|</span>
+                                    <br class="d-none d-lg-block d-xl-none">
+                                    <a href="http://bahadorsaket.com/publication/VbDEuroVis2019.pdf" target="_blank">EuroVis 2019 </a>
+                                    <br>
+                                    <a href="http://bahadorsaket.com/publication/Saket2019CGADemonstration.pdf" target="_blank">CG&A2019</a>
+                                    <span class="separator">|</span>
+                                    <br class="d-none d-lg-block d-xl-none">
+                                    <a href="http://bahadorsaket.com/publication/infovis2019.pdf" target="_blank">InfoVis 2019</a>
+                                    </span>
+                                </p>
+                                <!-- [****EDIT****] Talks-->
+                                <p>
+                                    <i class="fas fa-podcast"></i>Talks
+                                    <span class="multiple_items">
+                                        <a href="https://vimeo.com/228918233" target="_blank">InfoVis Talk</a>
+                                        <br>
+                                        <a href="https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2b025a22-9390-4d10-b2ba-aa6b00272ed7"
+                                            target="_blank">TRIPODS Southwest Talk</a>
+                                    </span>
+                                </p>
+                                <!-- [****EDIT****]Video -->
+                                <p>
+                                    <i class="fas fa-video"></i> Videos
+                                    <span>
+                                        <a href="https://www.youtube.com/watch?v=JFdStB0nYRs&t=4s"
+                                            target="_blank">VisExemplar</a>
+                                        <br>
+                                        <a href="https://vimeo.com/327476247" target="_blank">Liger</a></span>
+                                    </span>
+                                </p>
+                                <!-- [****EDIT****] Source Code -->
+                                <p>
+                                    <i class="fas fa-code-branch"></i> Source Code
+                                    <span>
+                                        <a href="https://github.com/visbydemo" target="_blank">Fork on Github</a>
+                                    </span>
+                                </p>
+                                <!-- [****EDIT****] Status -->
+                                <p>
+                                    <i class="fas fa-tasks"></i> Status
+                                    <span>Ongoing</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-9 col-content">
+                            <h4>Motivation</h4>
+                            <p>As data grow in size and complexity it is difficult for humans to make sense of data in their raw form. To address this challenge, one powerful approach is to visualize data. A key component of visualization systems that helps
+                                human sensemaking is its interactivity. Thoughtfully designed interactions make the visual analysis process a conversation between the user and the interface that results in a deeper understanding of data. Yet, despite
+                                decades of research, existing visualization systems still require users to interact through layers of menus on control panels. Such systems expect users to adapt their mental model into an algorithmic process by requiring
+                                them to: 1) break their higher-level goals to a set of lower-level system specifications (e.g., specify different data mappings), and 2) go through layers of menus in a sequential order to execute those lower-level specifications.
+                                The irony of the situation is that the burden of transforming the user's higher-level goals to the system's lower-level specifications and creating visualizations is carried by the user, not the system. This burden of specification
+                                hinders the data analysis process for all users, visualization novices in particular. It is a truism that computers are good at performing tedious tasks. So why is it that users need to go through a cumbersome process of
+                                specifying a variety of parameters through layers of menus?</p>
+                            <br>
+                            <h4>Visualization by Demonstration</h4>
+                            <p>Conveying a process or an outcome to someone by demonstration might be one of the oldest forms of communicating one's knowledge and intentions in apprenticeship-style learning contexts. People are effective in communicating
+                                their intended goals and results by gesturing, drawing visuals, and other forms of demonstration to guide someone else through the intended results. My research extends the demonstrational paradigm to visualization construction
+                                and visual data exploration in a method called Vis by Demo. With this paradigm, users directly manipulate~\cite{Hutchins:1985} the visual representation to provide visual demonstrations of their intent to the system. The
+                                system then interprets the given demonstrations and recommends potential specifications to the users. Vis by Demo aims to empower the user during the data analysis process by balancing the responsibility between the user
+                                and the system --- users provide visual demonstrations, and based on this, the system infers potential specifications and then provides concrete recommendations. </p>
+                            <br>
+                            <p>Imagine an HIV researcher who wants to cluster her patients' dataset to derive meaningful patterns and relationships. By skimming through her data, she notices that two of her patients have the same cell decline level (CD4)
+                                of 67 (see Figure1-<span class="d-none d-md-inline">Left</span><span class="d-md-none">Top</span>). She wonders which other patients fall into the same group as these two patients. She drags the two data points representing
+                                these two patients onto the canvas to demonstrate her interest in finding cluster configurations that locate them together. Based on this demonstration, the system provides recommendations for different clustering results
+                                for the entire dataset (see Figure1-Middle). Among all recommendations, she selects the recommendation that clusters the data based on combination of both gender and ethnicity features. The resulting visualization converges
+                                with her prior knowledge that hispanic males have an average CD4 level of 60 (see Figure1-<span class="d-none d-md-inline">Right</span><span class="d-md-none">Bottom</span>).
+                            </p>
+                            <div class="row image-fit">
+                                <div class="col-12 col-md-4">
+                                    <img src="images/wireframe_1.jpg">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="images/wireframe_2.png">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="images/wireframe_3.png">
+                                </div>
+                                <div class="col-12">
+                                    <p class="fig-label">
+                                        <b>Figure 1: <span class="d-none d-md-inline">Left:</span><span class="d-md-none">Top:</span></b> The user selects a sample of data points and drags them to the canvas.
+                                        <b>Middle:</b> Interface infers clustering results based on the given demonstration.
+                                        <b><span class="d-none d-md-inline">Right:</span><span class="d-md-none">Bottom:</span></b> User selects a recommendation and gains insight.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                While Vis by Demo can infer the user's intent based on manipulating a sample of the dataset, traditional data visualization tools expect the user to explicitly specify relevant data points --- this involves a series of tedious parameterizations through
+                                control panels. Additionally, through the recommendations, Vis by Demo supports the user's basic intent by providing new and complex representations of the data. This paradigm empowers both users with low proficiency in
+                                traditional tools as well as users with limited knowledge in data science methods (e.g., clustering).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ubicomp.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106316804-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106316804-1');
+    </script>
 </body>
 
 </html>
